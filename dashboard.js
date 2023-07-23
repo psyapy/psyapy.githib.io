@@ -54,11 +54,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // Function to check if the user is an admin based on the promo code
     function isUserAdmin() {
         const role = getCookie("psyapy_role");
-        return role === "admin";
+        return role;
     }
 
     // Check if the user is an admin on page load
-    if (isUserAdmin()) {
+    if (isUserAdmin() === "Admin") {
         userNameLabel.textContent = "Admin"; // Update the user label to show "Admin"
         const sessionBox = document.getElementById("sessionBox");
         const changeStatusBtn = document.getElementById("changeStatusBtn");
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
     submitCodeBtn.addEventListener("click", function () {
         const promoCode = document.getElementById("specialCode").value.trim(); // Trim the input value
         if (promoCode === specialCode) {
-            setCookie("psyapy_role", "admin", 365); // Set the user role to admin for 1 year
+            setCookie("psyapy_role", "Admin", 365); // Set the user role to admin for 1 year
             userNameLabel.textContent = "Admin"; // Update the user label to show "Admin"
             const sessionBox = document.getElementById("sessionBox");
             const changeStatusBtn = document.getElementById("changeStatusBtn");
