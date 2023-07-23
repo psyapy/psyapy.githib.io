@@ -9,55 +9,57 @@ body {
     height: 100vh;
     margin: 0;
     width: 100vw;
-}
-
-#logotext {
+  }
+  
+  #logotext {
     color: #fff;
     font-size: 24px;
     font-weight: bold;
     text-align: center;
     margin-bottom: 30px;
-}
-
-.container {
-    max-width: 400px;
+  }
+  
+  .container {
+    width: 40vh; /* Set the width to 40% of the viewport height to create a square */
+    max-width: 90vw; /* Add max-width to ensure it doesn't overflow on larger screens */
+    height: 40vh;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 35px;
     background: rgba(255, 255, 255, 0.7); /* Slightly transparent background */
     backdrop-filter: blur(10px);
-}
-
-h1 {
+  }
+  
+  h1 {
     text-align: center;
     margin-bottom: 20px;
     font-size: 30px;
     color: #007bff;
-}
-
-form {
+  }
+  
+  form {
     display: flex;
     flex-direction: column;
-}
-
-.input-group {
+  }
+  
+  .input-group {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-}
-
-label {
+  }
+  
+  label {
     font-weight: bold;
     margin-bottom: 8px;
-}
-
-input {
+  }
+  
+  input {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-}
-
-button {
+  }
+  
+  button {
     padding: 10px 65px;
     background-color: #007bff;
     color: #fff;
@@ -67,9 +69,57 @@ button {
     align-self: center;
     transition: 1s;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-#verificationQuestion {
+  }
+  
+  #verificationQuestion {
     font-weight: bold;
     margin-top: 8px;
-}
+  }
+  
+  /* Media Queries */
+  
+  /* For screens smaller than 768px (e.g., smartphones) */
+  @media (max-width: 767px) {
+    #logotext {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+  
+    .container {
+      width: 90vw;
+      max-width: 90vw;
+      height: auto;
+    }
+  
+    h1 {
+      font-size: 24px;
+    }
+  
+    input,
+    button {
+      padding: 8px 50px;
+    }
+  }
+  
+  /* For screens larger than 768px (e.g., tablets and desktops) */
+  @media (min-width: 768px) {
+    #logotext {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+  
+    .container {
+      width: 40vh;
+      max-width: 90vw;
+      height: 40vh;
+    }
+  
+    h1 {
+      font-size: 30px;
+    }
+  
+    input,
+    button {
+      padding: 10px 65px;
+    }
+  }  

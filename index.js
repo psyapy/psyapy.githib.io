@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function checkLoginStatus() {
         const name = getCookie("psyapy_name2");
         if (name) {
-            window.location.href = "/dashboard.html";
+            //window.location.href = "/dashboard.html";
         }
     }
 
