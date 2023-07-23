@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Psyapy - Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <div class="greeting">Hello there,<span id="userName"></span>!</div>
+        <div class="user-label" id="userRoleLabel">Customer</div>
+
+        <div class="content-box">
+            <h2>About Counselling</h2>
+            <p>
+                Counseling is a fundamental aspect of mental health care that provides individuals with a safe and confidential space to address emotional, psychological, and behavioral challenges. Grounded in empathy, trust, and non-judgmental support, counseling aims to facilitate personal growth, self-awareness, and improved coping strategies. This comprehensive overview delves into the multifaceted nature of counseling, exploring its purpose, various modalities, and the profound impact it has on enhancing mental well-being. 
+            </p>
+        </div>
+
+        <div class="content-box">
+            <h2>Schedule</h2>
+            <ul>
+                <li>Monday: 9:00 AM - 5:00 PM</li>
+                <li>Tuesday: 10:00 AM - 6:00 PM</li>
+                <li>Wednesday: 9:00 AM - 5:00 PM</li>
+                <li>Thursday: 10:00 AM - 6:00 PM</li>
+                <li>Friday: 9:00 AM - 5:00 PM</li>
+            </ul>
+        </div>
+
+        <div class="promo-code">
+            <label for="specialCode">Enter Special Code:</label>
+            <input type="text" id="specialCode">
+            <button id="submitCodeBtn">Submit</button>
+        </div>
+
+        <div class="session-box" id="sessionBox">
+            <h2>Session Status</h2>
+            <p id="sessionStatus">Offline</p>
+            <button id="changeStatusBtn">Change Session Status</button>
+        </div>
+
+        <button id="startCallBtn">Start Hands-Free Call</button>
+        <button id="openChatBtn">Open Chat</button>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>
