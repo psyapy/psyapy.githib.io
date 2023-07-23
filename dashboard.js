@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to get the user's name from the cookie
     function getUserName() {
-        const name = getCookie("psyapy_name");
+        const name = getCookie("psyapy_name2");
         if (name) {
             return name;
         } else {

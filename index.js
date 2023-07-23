@@ -51,14 +51,14 @@ document.addEventListener("DOMContentLoaded", function () {
     loginForm.addEventListener("submit", function (event) {
         event.preventDefault();
         if (checkVerificationAnswer()) {
-            if (getCookie("psyapy_name2") === ""){
+            if (getCookie("psyapy_name2") === null || getCookie("psyapy_name2") === ""){
                 const name = document.getElementById("name").value;
                 setCookie("psyapy_name2", name, 365); // Store the name for 1 year
                 document.getElementById("submitbutton").textContent = "Creating accounting..";
                 setInterval(function(){
                     window.location.href = "/dashboard.html"
                 }, 2000);
-            } else{
+            } else {
                 alert("You already have an account | Welcome back " + getCookie("psyapy_name2"));
                 setInterval(function(){
                     window.location.href = "/dashboard.html"
