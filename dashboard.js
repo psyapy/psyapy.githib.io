@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to check if the user is logged in
     function checkLoginStatus() {
-        const name = getCookie("psyapy_name");
+        const name = getCookie("psyapy_name2");
         if (!name) {
             window.location.href = "/index.html"; // Redirect to the login page if the user is not logged in
         }
